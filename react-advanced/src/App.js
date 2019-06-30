@@ -26,16 +26,18 @@
 // export default App;
 
 import React from 'react';
-import Hello from './component/Hello'
-import Wrapper from './component/Wrapper'
+// import Hello from './component/Hello'
+// import Wrapper from './component/Wrapper'
+import Counter from './component/Counter'
 
 // isSpecial 만 넣어줄시 isSpecial={true} 와 동일
 function App() {
   return (
-    <Wrapper>
-      <Hello name="react" color="red" isSpecial={true}/>
-      <Hello color="pink"/>
-    </Wrapper>
+    // <Wrapper>
+    //   <Hello name="react" color="red" isSpecial={true}/>
+    //   <Hello color="pink"/>
+    // </Wrapper>
+    <Counter />
   );
 }
 
