@@ -30,7 +30,8 @@ import React from 'react';
 // import Wrapper from './component/Wrapper'
 // import Counter from './component/Counter'
 // import InputSample from './component/InputSample'
-import InputSample from './component/InputSample1'
+// import InputSample1 from './component/InputSample1'
+import InputSample2 from './component/InputSample2'
 
 // isSpecial 만 넣어줄시 isSpecial={true} 와 동일
 function App() {
@@ -40,7 +41,8 @@ function App() {
     //   <Hello color="pink"/>
     // </Wrapper>
     // <Counter />
-    <InputSample/>
+    // <InputSample/>
+    <InputSample2/>
   );
 }
 
