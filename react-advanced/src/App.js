@@ -31,7 +31,8 @@ import React from 'react';
 // import Counter from './component/Counter'
 // import InputSample from './component/InputSample'
 // import InputSample1 from './component/InputSample1'
-import InputSample2 from './component/InputSample2'
+// import InputSample2 from './component/InputSample2'
+import UserList from './component/UserList'
 
 // isSpecial 만 넣어줄시 isSpecial={true} 와 동일
 function App() {
@@ -42,7 +43,8 @@ function App() {
     // </Wrapper>
     // <Counter />
     // <InputSample/>
-    <InputSample2/>
+    // <InputSample2/>
+    <UserList />
   );
 }
 
