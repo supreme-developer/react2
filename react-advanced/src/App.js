@@ -58,17 +58,20 @@ function App() {
     {
         id : 1,
         username : 'hong',
-        email : 'ggg@naver.com'
+        email : 'ggg@naver.com',
+        active : true
     },
     {
         id : 2,
         username : 'kim',
-        email : 'kkk@naver.com'
+        email : 'kkk@naver.com',
+        active : false
     },
     {
         id : 3,
         username : 'lee',
-        email : 'lll@naver.com'
+        email : 'lll@naver.com',
+        active : false
     }
   ]);
 
@@ -77,7 +80,8 @@ function App() {
     const user = {
       id : nextId.current,
       username,
-      email
+      email,
+      active : false
     }
 
     // 배열에 추가할 경우에는 아래와 같이 [] 감싸준다.
@@ -97,6 +101,13 @@ function App() {
     setUsers(users.filter(user => user.id !== id));
   }
 
+  const onToggle = id => {
+    setUsers(users.map(user =>
+        user.id === id ? {...user, active: !user.active} : user
+      )
+    );
+  }
+
   return (
     // <Wrapper>
     //   <Hello name="react" color="red" isSpecial={true}/>
@@ -114,7 +125,7 @@ function App() {
        onChange={onChange}
        onCreate={onCreate}/>
       
-      <UserListRef Users={users} onRemove={onRemove}/>
+      <UserListRef Users={users} onRemove={onRemove} onToggle={onToggle}/>
     </>
     
   );
