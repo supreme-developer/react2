@@ -11,14 +11,11 @@ function User({user}) {
 
 
 function UserListRef({Users}) {
-
-
-
     return (
         <div>
              {
                  Users.map(user => (
-                    <User user={user} key={user.idx}/>))
+                    <User user={user} key={user.id}/>))
              }   
         </div>
     );

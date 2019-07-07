@@ -25,7 +25,7 @@
 
 // export default App;
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 // import Hello from './component/Hello'
 // import Wrapper from './component/Wrapper'
 // import Counter from './component/Counter'
@@ -35,10 +35,26 @@ import React, { useRef } from 'react';
 // import UserList from './component/UserList'
 // import UserList2 from './component/UserList2'
 import UserListRef from './component/UserListRef'
+import CreateUser from './component/CreateUser'
 
 // isSpecial 만 넣어줄시 isSpecial={true} 와 동일
 function App() {
-  const users = [
+  const [inputs, setInputs] = useState({
+    username : '',
+    email : ''
+  });
+
+  const {username, email} = inputs;
+  const onChange = e => {
+    const {name, value} = e.target;
+    setInputs({
+      ...inputs,
+      [name] : value
+    })
+  }
+
+
+  const [users, setUsers] = useState([
     {
         id : 1,
         username : 'hong',
@@ -54,10 +70,24 @@ function App() {
         username : 'lee',
         email : 'lll@naver.com'
     }
-  ];
+  ]);
 
   const nextId = useRef(4);
-  const OnCreate = () => {
+  const onCreate = () => {
+    const user = {
+      id : nextId.current,
+      username,
+      email
+    }
+
+    // 배열에 추가할 경우에는 아래와 같이 [] 감싸준다.
+    //setUsers([...users, user]);
+    setUsers(users.concat(user));
+
+    setInputs({
+      username : '',
+      email : ''
+    })
 
     nextId.current += 1;
   };
@@ -72,7 +102,16 @@ function App() {
     // <InputSample2/>
     // <UserList />
     // <UserList2 />
-    <UserListRef Users={users}/>
+    <>
+      <CreateUser 
+       username={username}
+       email={email}
+       onChange={onChange}
+       onCreate={onCreate}/>
+      
+      <UserListRef Users={users}/>
+    </>
+    
   );
 }
 
