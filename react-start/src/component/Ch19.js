@@ -88,7 +88,7 @@ function Ch19() {
             <Ch191 
                 username={username}
                 email={email}
-                onChanage={onChange}
+                onChange={onChange}
                 onCreate={onCreate}
             />
             <Ch192 Users={Users} onRemove={onRemove} onToggle={onToggle}/>

@@ -15,7 +15,12 @@ import React from 'react';
 // import Ch16 from './component/Ch16';
 // import Ch17 from './component/Ch17';
 // import Ch18 from './component/Ch18';
-import Ch19 from './component/Ch19';
+// import Ch19 from './component/Ch19';
+// import Ch20 from './component/Ch20';
+// import Ch21 from './component/Ch21';
+// import Ch22 from './component/Ch22';
+// import Ch23 from './component/Ch23';
+import Ch24 from './component/Ch24';
 
 function App() {
   return (
@@ -42,7 +47,12 @@ function App() {
       {/* <Ch16 /> */}
       {/* <Ch17 /> */}
       {/* <Ch18 /> */}
-      <Ch19 />
+      {/* <Ch19 /> */}
+      {/* <Ch20 /> */}
+      {/* <Ch21 /> */}
+      {/* <Ch22 /> */}
+      {/* <Ch23 /> */}
+      <Ch24 />
     </>
   );
 }
