@@ -26,7 +26,7 @@ function Ch11() {
             username : 'ccc',
             email : 'ccc@naver.com'
         }
-    ]
+    ];
 
     return (
         <div>

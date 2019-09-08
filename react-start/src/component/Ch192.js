@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 // props만 변경될 경우만(input값만 바뀔때에는 상관없음)
 const Ch1921 = React.memo(function Ch1921({user, onRemove, onToggle}) {
