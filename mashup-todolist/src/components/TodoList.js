@@ -14,10 +14,6 @@ function TodoList( { children }) {
     const todos = useTodoState();
     return (
        <TodoListBlock>
-           {/* <TodoItem text="프로젝트 생성하기" done={true} />
-           <TodoItem text="컴포넌트 스타일링하기" done={true} />
-           <TodoItem text="Context 만들기" done={false} />
-           <TodoItem text="기능구현하기" done={false} /> */}
            {
              todos.map( 
                todo => <TodoItem 
