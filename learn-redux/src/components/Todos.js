@@ -8,7 +8,7 @@ const TodoItem = React.memo(function TodoItem ({ todo, onToggle }) {
             }}
             onClick={() => onToggle(todo.id)}
         >
-        {todo.text}
+            {todo.text}
         </li>
     )
 })
